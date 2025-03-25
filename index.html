@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>API Book Library</title>
+  </head>
+  <body onload="toggleView('grid')">
+
+    <header>
+      <h1>Book Library</h1>
+    </header>
+
+    <div class="search-bar-section">
+      <input type="text" placeholder="Search book title" id="bookSearchInput" />
+      <!-- <button id="bookSearchBtn">Search</button> -->
+    </div>
+
+    <div class="filter-section">
+      <div class="view-toggle-btns">
+        <button id="gridView" onclick="toggleView('grid')">Grid</button>
+        <button id="listView" onclick="toggleView('list')">List</button>
+      </div>
+      
+      <select id="sort">
+        <option value="" disabled selected>Sort By: </option>
+        <option value="title">Title</option>
+        <option value="date-a">Published Date(Asc)</option>
+        <option value="date-d">Published Date(Des)</option>
+      </select>
+    </div>
+
+    <div class="booksContainer">
+
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
