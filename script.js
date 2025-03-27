@@ -40,12 +40,19 @@ fillBookData();
 
 function toggleView(view) {
   const container = document.querySelector(".booksContainer");
+  const gridViewBtn = document.getElementById("gridView");
+  const listViewBtn = document.getElementById("listView");
   if (view === "grid") {
     container.classList.add("grid");
     container.classList.remove("list");
+    gridViewBtn.classList.add("active");
+    listViewBtn.classList.remove("active");
+
   } else {
     container.classList.add("list");
     container.classList.remove("grid");
+    listViewBtn.classList.add("active");
+    gridViewBtn.classList.remove("active");
   }
 }
 
@@ -111,6 +118,8 @@ function sortBooks(filter) {
 function handleScroll() {
   // To check if user is at end of the page
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+    if(bkSearchInput.value)
+      return;
     loadMoreBooks();
   }
 }

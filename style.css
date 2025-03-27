@@ -66,6 +66,12 @@ header {
   background: #7f8c8d;
 }
 
+.view-toggle-btns button.active {
+  background: #3498db; 
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
 #sort {
   padding: 8px;
   border-radius: 5px;
